@@ -1,0 +1,123 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname bibnamefont\endcsname\relax
+  \def\bibnamefont#1{#1}\fi
+\expandafter\ifx\csname bibfnamefont\endcsname\relax
+  \def\bibfnamefont#1{#1}\fi
+\expandafter\ifx\csname citenamefont\endcsname\relax
+  \def\citenamefont#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{\citenamefont{Alves et~al.}(1996)\citenamefont{Alves, Amato, Anjos,
+  Appel, Astorga, Bracker, Cremaldi, Dagenhart, Darling, Dixon
+  et~al.}}]{alves1996feynman}
+\bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Alves}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Amato}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Anjos}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Appel}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Astorga}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Bracker}},
+  \bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Cremaldi}},
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Dagenhart}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Darling}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Dixon}},
+  \bibnamefont{et~al.}, \bibinfo{journal}{Physical review letters}
+  \textbf{\bibinfo{volume}{77}}, \bibinfo{pages}{2392} (\bibinfo{year}{1996}).
+
+\bibitem[{\citenamefont{Sj{\"o}strand et~al.}(2015)\citenamefont{Sj{\"o}strand,
+  Ask, Christiansen, Corke, Desai, Ilten, Mrenna, Prestel, Rasmussen, and
+  Skands}}]{pythia}
+\bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Sj{\"o}strand}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Ask}},
+  \bibinfo{author}{\bibfnamefont{J.~R.} \bibnamefont{Christiansen}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Corke}},
+  \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{Desai}},
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Ilten}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Mrenna}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Prestel}},
+  \bibinfo{author}{\bibfnamefont{C.~O.} \bibnamefont{Rasmussen}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{P.~Z.}
+  \bibnamefont{Skands}}, \bibinfo{journal}{Computer physics communications}
+  \textbf{\bibinfo{volume}{191}}, \bibinfo{pages}{159} (\bibinfo{year}{2015}).
+
+\bibitem[{\citenamefont{Ballett et~al.}(2019)\citenamefont{Ballett, Boschi, and
+  Pascoli}}]{pascoli2019}
+\bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Ballett}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Boschi}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Pascoli}},
+  \bibinfo{journal}{arXiv preprint arXiv:1905.00284}  (\bibinfo{year}{2019}).
+
+\bibitem[{\citenamefont{Bondarenko et~al.}(2018)\citenamefont{Bondarenko,
+  Boyarsky, Gorbunov, and Ruchayskiy}}]{bondarenko2018}
+\bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Bondarenko}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Boyarsky}},
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Gorbunov}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Ruchayskiy}},
+  \bibinfo{journal}{Journal of High Energy Physics}
+  \textbf{\bibinfo{volume}{2018}}, \bibinfo{pages}{32} (\bibinfo{year}{2018}).
+
+\bibitem[{\citenamefont{Alekhin et~al.}(2016)\citenamefont{Alekhin,
+  Altmannshofer, Asaka, Batell, Bezrukov, Bondarenko, Boyarsky, Choi, Corral,
+  Craig et~al.}}]{alekhin2016}
+\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Alekhin}},
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Altmannshofer}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Asaka}},
+  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Batell}},
+  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Bezrukov}},
+  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Bondarenko}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Boyarsky}},
+  \bibinfo{author}{\bibfnamefont{K.-Y.} \bibnamefont{Choi}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Corral}},
+  \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{Craig}},
+  \bibnamefont{et~al.}, \bibinfo{journal}{Reports on progress in physics}
+  \textbf{\bibinfo{volume}{79}}, \bibinfo{pages}{124201}
+  (\bibinfo{year}{2016}).
+
+\bibitem[{\citenamefont{K{\"a}ll{\'e}n}(1965)}]{kallen1965elementary}
+\bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{K{\"a}ll{\'e}n}},
+  \bibinfo{journal}{American Journal of Physics} \textbf{\bibinfo{volume}{33}},
+  \bibinfo{pages}{859} (\bibinfo{year}{1965}).
+
+\bibitem[{\citenamefont{Richman and Burchat}(1995)}]{richman1995leptonic}
+\bibinfo{author}{\bibfnamefont{J.~D.} \bibnamefont{Richman}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{P.~R.} \bibnamefont{Burchat}},
+  \bibinfo{journal}{Reviews of Modern Physics} \textbf{\bibinfo{volume}{67}},
+  \bibinfo{pages}{893} (\bibinfo{year}{1995}).
+
+\bibitem[{\citenamefont{Aliev et~al.}(2004)\citenamefont{Aliev, {\"O}zpineci,
+  and Savc{\'\i}}}]{aliev2004form}
+\bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Aliev}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{{\"O}zpineci}},
+  \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Savc{\'\i}}},
+  \bibinfo{journal}{The European Physical Journal C-Particles and Fields}
+  \textbf{\bibinfo{volume}{38}}, \bibinfo{pages}{85} (\bibinfo{year}{2004}).
+
+\bibitem[{\citenamefont{Tanabashi et~al.}(2018)\citenamefont{Tanabashi,
+  Hagiwara, Hikasa, Nakamura, Sumino, Takahashi, Tanaka, Agashe, Aielli, Amsler
+  et~al.}}]{pdg2018}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Tanabashi}},
+  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Hagiwara}},
+  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Hikasa}},
+  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Nakamura}},
+  \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Sumino}},
+  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Takahashi}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Tanaka}},
+  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Agashe}},
+  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Aielli}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Amsler}},
+  \bibnamefont{et~al.}, \bibinfo{journal}{Physical Review D}
+  \textbf{\bibinfo{volume}{98}}, \bibinfo{pages}{030001}
+  (\bibinfo{year}{2018}).
+
+\bibitem[{\citenamefont{Gorbunov and Shaposhnikov}(2007)}]{shaposhnikov2007}
+\bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Gorbunov}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Shaposhnikov}},
+  \bibinfo{journal}{Journal of High Energy Physics}
+  \textbf{\bibinfo{volume}{2007}}, \bibinfo{pages}{015} (\bibinfo{year}{2007}).
+
+\end{thebibliography}

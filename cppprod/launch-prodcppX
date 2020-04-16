@@ -1,0 +1,23 @@
+#!/bin/bash
+
+make prodcppX
+
+q=431
+
+./prodcppX $q 11 >/dev/null &
+./prodcppX $q 12 >/dev/null &
+./prodcppX $q 13
+
+./prodcppX $q 14 >/dev/null &
+./prodcppX $q 15 >/dev/null &
+./prodcppX $q 16
+
+./prodcppX $q 17 >/dev/null &
+./prodcppX $q 18 >/dev/null &
+./prodcppX $q 19
+
+./prodcppX $q 20
+
+zenity --info \
+--text '<span font="32"> Procesos \n completados </span>' \
+--width=300 --height=200

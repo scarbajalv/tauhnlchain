@@ -1,0 +1,45 @@
+#!/bin/bash
+
+# ./bg-multigunX idGun maxoffaxis deltaoffaxis seed nroot index
+
+make multigunX-bg
+
+q=431
+
+./multigunX-bg $q 40 1 1 1 1 > /dev/null &
+./multigunX-bg $q 40 1 2 2 2 > /dev/null &
+./multigunX-bg $q 40 1 3 3 3 
+
+./multigunX-bg $q 40 1 4 4 4 > /dev/null &
+./multigunX-bg $q 40 1 5 5 5 > /dev/null &
+./multigunX-bg $q 40 1 6 6 6 
+
+./multigunX-bg $q 40 1 7 7 7 > /dev/null &
+./multigunX-bg $q 40 1 8 8 8 > /dev/null &
+./multigunX-bg $q 40 1 9 9 9 
+
+./multigunX-bg $q 40 1 10 10 10
+
+
+printf '\n multigunX finalizado\n'
+
+
+#sleep 10
+#make root-append
+#printf '\nUniendo archivos...\n'
+#cp 120-1.root 120.root
+#k=120
+#i=2
+#j=10
+#while [ $i -le $j ]
+#do
+#   printf "$i "
+#   ./root-append $k $i 
+#   i=$(( i + 1 )) # increase number by 1 
+#done
+#mv 120.root ./data/120-$q.root
+#printf "$q completado\n"
+
+#zenity --info \
+#--text '<span font="32"> Procesos \n completados </span>' \
+#--width=300 --height=200 

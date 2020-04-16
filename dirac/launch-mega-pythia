@@ -1,0 +1,116 @@
+#!/bin/bash
+
+# Para email/shutdown Requiere: 
+# sudo -E -u sane ./X
+
+# ************ MESON *************
+cd meson
+
+make multigunX
+
+#q=411
+#
+#./launch-pythia $q 40 1 1 1 > /dev/null &
+#./launch-pythia $q 40 1 20 2 > /dev/null &
+#./launch-pythia $q 40 1 40 3 > /dev/null &
+#./launch-pythia $q 40 1 60 4 > /dev/null &
+#./launch-pythia $q 40 1 80 5 > /dev/null &
+#./launch-pythia $q 40 1 100 6 > /dev/null &
+#./launch-pythia $q 40 1 120 7 > /dev/null &
+#./launch-pythia $q 40 1 140 8 > /dev/null &
+#./launch-pythia $q 40 1 160 9 > /dev/null &
+#./launch-pythia $q 40 1 180 10
+
+#ssmtp sanelicv@gmail.com < mail.txt
+
+#sleep 30
+
+q=-411
+
+./launch-pythia $q 40 1 1 1 > /dev/null &
+./launch-pythia $q 40 1 20 2 > /dev/null &
+./launch-pythia $q 40 1 40 3 > /dev/null &
+./launch-pythia $q 40 1 60 4 > /dev/null &
+./launch-pythia $q 40 1 80 5 > /dev/null &
+./launch-pythia $q 40 1 100 6 > /dev/null &
+./launch-pythia $q 40 1 120 7 > /dev/null &
+./launch-pythia $q 40 1 140 8 > /dev/null &
+./launch-pythia $q 40 1 160 9 > /dev/null &
+./launch-pythia $q 40 1 180 10
+
+ssmtp sanelicv@gmail.com < mail.txt
+sleep 30
+
+q=431
+
+./launch-pythia $q 40 1 1 1 > /dev/null &
+./launch-pythia $q 40 1 20 2 > /dev/null &
+./launch-pythia $q 40 1 40 3 > /dev/null &
+./launch-pythia $q 40 1 60 4 > /dev/null &
+./launch-pythia $q 40 1 80 5 > /dev/null &
+./launch-pythia $q 40 1 100 6 > /dev/null &
+./launch-pythia $q 40 1 120 7 > /dev/null &
+./launch-pythia $q 40 1 140 8 > /dev/null &
+./launch-pythia $q 40 1 160 9 > /dev/null &
+./launch-pythia $q 40 1 180 10
+
+ssmtp sanelicv@gmail.com < mail.txt
+sleep 30
+
+q=-431
+
+./launch-pythia $q 40 1 1 1 > /dev/null &
+./launch-pythia $q 40 1 20 2 > /dev/null &
+./launch-pythia $q 40 1 40 3 > /dev/null &
+./launch-pythia $q 40 1 60 4 > /dev/null &
+./launch-pythia $q 40 1 80 5 > /dev/null &
+./launch-pythia $q 40 1 100 6 > /dev/null &
+./launch-pythia $q 40 1 120 7 > /dev/null &
+./launch-pythia $q 40 1 140 8 > /dev/null &
+./launch-pythia $q 40 1 160 9 > /dev/null &
+./launch-pythia $q 40 1 180 10
+
+ssmtp sanelicv@gmail.com < mail.txt
+sleep 30
+
+cd ..
+
+# ************ TAU *************
+cd tau
+
+make multigunX
+
+q=411
+
+./launch-pythia $q 40 1 1 1 > /dev/null &
+./launch-pythia $q 40 1 20 2 > /dev/null &
+./launch-pythia $q 40 1 40 3 > /dev/null &
+./launch-pythia $q 40 1 60 4 > /dev/null &
+./launch-pythia $q 40 1 80 5 > /dev/null &
+./launch-pythia $q 40 1 100 6 > /dev/null &
+./launch-pythia $q 40 1 120 7 > /dev/null &
+./launch-pythia $q 40 1 140 8 > /dev/null &
+./launch-pythia $q 40 1 160 9 > /dev/null &
+./launch-pythia $q 40 1 180 10
+
+ssmtp sanelicv@gmail.com < mail.txt
+
+sleep 30
+
+cd ..
+
+shutdown -P +30
+
+
+
+#printf '\nMegapythia finalizado.\n'
+#printf '\nUniendo archivos...\n'
+#cp 120-1.root 120.root
+#./launch-root-append 120 2 200
+#mv 120.root ./data/120-431.root
+
+#printf '\nSUCCESS!\n'
+
+#zenity --info \
+#--text '<span font="32"> Procesos \n completados </span>' \
+#--width=300 --height=200

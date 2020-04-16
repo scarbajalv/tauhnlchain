@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# sudo -E -u sane ./X
+
+	make multigunX-0
+
+	./multigunX-0 431 1..-0.dat 1 1 1 1 1 > /dev/null &
+	./multigunX-0 431 1..-0.dat 1 1 2 2 2 > /dev/null &
+	./multigunX-0 431 1..-0.dat 1 1 3 3 3 > /dev/null &
+	./multigunX-0 431 1..-0.dat 1 1 4 4 4
+
+#	shutdown -P +10

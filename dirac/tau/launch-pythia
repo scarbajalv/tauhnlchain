@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# ./X pdgid maxoffaxis deltaoffaxis seed_i index
+
+# ./multigun idGun mHNL.dat maxoffaxis deltaoffaxis seed nroot index
+
+k=$1
+
+#make multigunX
+
+# Abrimos el file con los nombres de los "mHNL.dat"
+masses="./mathbrs/confignames.dat"
+
+j=$4
+
+while IFS= read -r line1
+do
+	echo -e "\nUtilizando archivo de configuración idGun=$1, $line1, maxoffaxis=$2, deltaoffaxis=$3, seed=$j, index=$5..."
+	# hacemos el seed = nroot = j
+	./multigunX $1 "./mathbrs/$line1" $2 $3 $j $j $5
+	j=$(( j + 1 )) # increase number by 1 
+done < "$masses"
