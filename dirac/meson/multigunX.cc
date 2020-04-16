@@ -162,7 +162,7 @@ int main(int argc, char *argv[]) {
   }
   
   stringstream nroot_ss;
-  nroot_ss  << getEnv("hnldata") << hnlNature << "/" << hnlMother << "/" << idGun_s << "/" 
+  nroot_ss  << getEnv("tauhnldata") << hnlNature << "/" << hnlMother << "/" << idGun_s << "/" 
             << idGun_s << "-"<<argv[6]<<".root";
 	string nroot_s = nroot_ss.str();
 	char nroot_c[nroot_s.size()+1];

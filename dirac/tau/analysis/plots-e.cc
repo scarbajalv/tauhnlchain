@@ -54,7 +54,7 @@ int main(int argc, char *argv[]){
   }
 
   stringstream nroot_ss;
-  nroot_ss  << getEnv("hnldata") << hnlNature << "/" << hnlMother << "/" 
+  nroot_ss  << getEnv("tauhnldata") << hnlNature << "/" << hnlMother << "/" 
             << idGun_s << "/" << idGun_s << ".root";
   string nroot_s = nroot_ss.str();
   char nroot_c[nroot_s.size()+1];
@@ -237,7 +237,7 @@ int main(int argc, char *argv[]){
   // CONFIG BRFACTORS 
   
   stringstream dataBRfactors_ss;
-  dataBRfactors_ss << getEnv("hnlchain") << hnlNature << "/" << hnlMother 
+  dataBRfactors_ss << getEnv("tauhnlchain") << hnlNature << "/" << hnlMother 
     << "/mathbrs/brfactors" << idGun_s << ".dat"; 
   string dataBRfactors_s = dataBRfactors_ss.str();
   char dataBRfactors_c[dataBRfactors_s.size()+1];

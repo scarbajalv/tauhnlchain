@@ -241,101 +241,86 @@ totalw[n_, mixe_, mixmu_, mixtau_] :=
   totalw4[n, mixe, mixmu, mixtau] +
   totalw5[n, mixe, mixmu, mixtau] + 
   totalw6[n, mixe, mixmu, mixtau] +
-  totalw7[n, mixe, mixmu, mixtau]
+  totalw7[n, mixe, mixmu, mixtau];
+
+totalw2tau[n_, mixe_, mixmu_, mixtau_] := 
+  enutautau[n,mixe] +
+  munutautau[n,mixmu] +
+  taunuee[n,mixtau] +
+  taunumumu[n,mixtau] +
+  nutauee[n,mixtau] +
+  nutaumumu[n,mixtau] +
+  width3a[n,mixe] +
+  width3a[n,mixmu] +
+  width3a[n,mixtau] +
+  width3a[n,mixtau] +
+  width3b[n,mixtau] +
+  eD[n,mixe] +
+  tauPi[n,mixtau] +
+  nupi0[n,mixtau] +
+  nueta[n,mixtau] +
+  nuetaprime[n,mixtau] +
+  nurho[n,mixtau] +
+  nuomega[n,mixtau] +
+  nuphi[n,mixtau]  ;
 
 	(****** HNL ******)
 	(* CC Dirac HNL  / 16 canales *)
 expBrAll[n_,mixe_,mixmu_,mixtau_]:={
-	(* 1. (3.1) l1 nu2 l2 *)
-	"2000000001:oneChannel = 1 "<>ToString[AccountingForm[enumumu[n,mixe]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 11 14 -13",
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[enutautau[n,mixe]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 11 16 -15", (* tau *)
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[munuee[n,mixmu]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 13 12 -11",  
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[munutautau[n,mixmu]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 13 16 -15",  (* tau *)
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[taunuee[n,mixtau]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 15 12 -11",  (* tau *)
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[taunumumu[n,mixtau]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 15 14 -13",  (* tau *)
-	(* 2a. (3.4) nu1 f2 f2bar *)
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[numuee[n,mixmu]/totalw[n,mixe,mixmu,mixtau],16]]<>" 22 14 11 -11",
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[nutauee[n,mixtau]/totalw[n,mixe,mixmu,mixtau],16]]<>" 22 16 11 -11", (* tau *)
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[nuemumu[n,mixe]/totalw[n,mixe,mixmu,mixtau],16]]<>" 22 12 13 -13",
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[nutaumumu[n,mixtau]/totalw[n,mixe,mixmu,mixtau],16]]<>" 22 16 13 -13", (* tau *)
-	(* 2b. (3.4) nu1 f1 f1bar *)
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[nueee[n,mixe]/totalw[n,mixe,mixmu,mixtau],16]]<>" 22 12 11 -11",
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[numumumu[n,mixmu]/totalw[n,mixe,mixmu,mixtau],16]]<>" 22 14 13 -13",
-	(* 3a. (3.5) nu1 nu2 nu2bar *)
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[width3a[n,mixe]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 12 14 -14",
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[width3a[n,mixe]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 12 16 -16",  (* tau *)
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[width3a[n,mixmu]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 14 12 -12",
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[width3a[n,mixmu]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 14 16 -16", (* tau *)
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[width3a[n,mixtau]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 16 12 -12",  (* tau *)
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[width3a[n,mixtau]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 16 14 -14",  (* tau *)
-	(* 3b. (3.5) nu1 nu1 nu1bar *)
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[width3b[n,mixe]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 12 12 -12",	
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[width3b[n,mixmu]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 14 14 -14",	
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[width3b[n,mixtau]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 16 16 -16",  (* tau *)
+	(* 1. (3.1) l1 nu2 l2 *)	
+	"2000000001:oneChannel = 1 "<>ToString[AccountingForm[enutautau[n,mixe]/totalw2tau[n,mixe,mixmu,mixtau],16]]<>" 0 11 16 -15", (* tau *)	
+	"2000000001:addChannel = 1 "<>ToString[AccountingForm[munutautau[n,mixmu]/totalw2tau[n,mixe,mixmu,mixtau],16]]<>" 0 13 16 -15",  (* tau *)
+	"2000000001:addChannel = 1 "<>ToString[AccountingForm[taunuee[n,mixtau]/totalw2tau[n,mixe,mixmu,mixtau],16]]<>" 0 15 12 -11",  (* tau *)
+	"2000000001:addChannel = 1 "<>ToString[AccountingForm[taunumumu[n,mixtau]/totalw2tau[n,mixe,mixmu,mixtau],16]]<>" 0 15 14 -13",  (* tau *)
+	(* 2a. (3.4) nu1 f2 f2bar *)	
+	"2000000001:addChannel = 1 "<>ToString[AccountingForm[nutauee[n,mixtau]/totalw2tau[n,mixe,mixmu,mixtau],16]]<>" 22 16 11 -11", (* tau *)	
+	"2000000001:addChannel = 1 "<>ToString[AccountingForm[nutaumumu[n,mixtau]/totalw2tau[n,mixe,mixmu,mixtau],16]]<>" 22 16 13 -13", (* tau *)
+	(* 2b. (3.4) nu1 f1 f1bar *)		
+	(* 3a. (3.5) nu1 nu2 nu2bar *)	
+	"2000000001:addChannel = 1 "<>ToString[AccountingForm[width3a[n,mixe]/totalw2tau[n,mixe,mixmu,mixtau],16]]<>" 0 12 16 -16",  (* tau *)	
+	"2000000001:addChannel = 1 "<>ToString[AccountingForm[width3a[n,mixmu]/totalw2tau[n,mixe,mixmu,mixtau],16]]<>" 0 14 16 -16", (* tau *)
+	"2000000001:addChannel = 1 "<>ToString[AccountingForm[width3a[n,mixtau]/totalw2tau[n,mixe,mixmu,mixtau],16]]<>" 0 16 12 -12",  (* tau *)
+	"2000000001:addChannel = 1 "<>ToString[AccountingForm[width3a[n,mixtau]/totalw2tau[n,mixe,mixmu,mixtau],16]]<>" 0 16 14 -14",  (* tau *)
+	(* 3b. (3.5) nu1 nu1 nu1bar *)	
+	"2000000001:addChannel = 1 "<>ToString[AccountingForm[width3b[n,mixtau]/totalw2tau[n,mixe,mixmu,mixtau],16]]<>" 0 16 16 -16",  (* tau *)
 	(* 4. (3.6) l- P+ *)
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[eD[n,mixe]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 11 411",  (* tau *)
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[eK[n,mixe]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 11 321",
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[muK[n,mixmu]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 13 321",
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[ePi[n,mixe]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 11 211",
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[muPi[n,mixmu]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 13 211",
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[tauPi[n,mixtau]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 15 211",	(* tau *)
-	(* 5. (3.7) nu P0 *)
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[nupi0[n,mixe]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 12 111",
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[nupi0[n,mixmu]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 14 111",
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[nupi0[n,mixtau]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 16 111", (* tau *)
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[nueta[n,mixe]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 12 221",
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[nueta[n,mixmu]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 14 221",
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[nueta[n,mixtau]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 16 221", (* tau *)
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[nuetaprime[n,mixe]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 12 331",
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[nuetaprime[n,mixmu]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 14 331",
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[nuetaprime[n,mixtau]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 16 331",  (* tau *)
-	(* 6. (3.8) l- V+ *)
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[eKstar[n,mixe]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 11 323",
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[muKstar[n,mixmu]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 13 323",
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[erhoc[n,mixe]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 11 213",
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[murhoc[n,mixmu]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 13 213",
-	(* 7. (3.9) nu V0 *)
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[nurho[n,mixe]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 12 113",
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[nurho[n,mixmu]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 14 113",
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[nurho[n,mixtau]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 16 113", (* tau *)
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[nuomega[n,mixe]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 12 223",
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[nuomega[n,mixmu]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 14 223",
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[nuomega[n,mixtau]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 16 223", (* tau *)
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[nuphi[n,mixe]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 12 333",
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[nuphi[n,mixmu]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 14 333",
-	"2000000001:addChannel = 1 "<>ToString[AccountingForm[nuphi[n,mixtau]/totalw[n,mixe,mixmu,mixtau],16]]<>" 0 16 333"  (* tau *)
+	"2000000001:addChannel = 1 "<>ToString[AccountingForm[eD[n,mixe]/totalw2tau[n,mixe,mixmu,mixtau],16]]<>" 0 11 411",  (* tau *)	
+	"2000000001:addChannel = 1 "<>ToString[AccountingForm[tauPi[n,mixtau]/totalw2tau[n,mixe,mixmu,mixtau],16]]<>" 0 15 211",	(* tau *)
+	(* 5. (3.7) nu P0 *)	
+	"2000000001:addChannel = 1 "<>ToString[AccountingForm[nupi0[n,mixtau]/totalw2tau[n,mixe,mixmu,mixtau],16]]<>" 0 16 111", (* tau *)	
+	"2000000001:addChannel = 1 "<>ToString[AccountingForm[nueta[n,mixtau]/totalw2tau[n,mixe,mixmu,mixtau],16]]<>" 0 16 221", (* tau *)	
+	"2000000001:addChannel = 1 "<>ToString[AccountingForm[nuetaprime[n,mixtau]/totalw2tau[n,mixe,mixmu,mixtau],16]]<>" 0 16 331",  (* tau *)
+	(* 6. (3.8) l- V+ *)	
+	(* 7. (3.9) nu V0 *)	
+	"2000000001:addChannel = 1 "<>ToString[AccountingForm[nurho[n,mixtau]/totalw2tau[n,mixe,mixmu,mixtau],16]]<>" 0 16 113", (* tau *)	
+	"2000000001:addChannel = 1 "<>ToString[AccountingForm[nuomega[n,mixtau]/totalw2tau[n,mixe,mixmu,mixtau],16]]<>" 0 16 223", (* tau *)	
+	"2000000001:addChannel = 1 "<>ToString[AccountingForm[nuphi[n,mixtau]/totalw2tau[n,mixe,mixmu,mixtau],16]]<>" 0 16 333"  (* tau *)
 };
 
 (* String with all the HNL BRs *)
 expbr[n_,mixe_,mixmu_,mixtau_]:=expBrAll[n,mixe,mixmu,mixtau];
 
 (* BR FActor for HNL decay to tau *)
-hnl2taubrfactor[n_,mixe_,mixmu_,mixtau_]:=
-    enutautau[n,mixe]/totalw[n,mixe,mixmu,mixtau]
-  + munutautau[n,mixmu]/totalw[n,mixe,mixmu,mixtau]
-  + taunuee[n,mixtau]/totalw[n,mixe,mixmu,mixtau]
-  + taunumumu[n,mixtau]/totalw[n,mixe,mixmu,mixtau]
+hnl2taubrfactor[n_,mixe_,mixmu_,mixtau_]:= Re[enutautau[n,mixe]/totalw[n,mixe,mixmu,mixtau] +
+  munutautau[n,mixmu]/totalw[n,mixe,mixmu,mixtau] +
+  taunuee[n,mixtau]/totalw[n,mixe,mixmu,mixtau] +
+  taunumumu[n,mixtau]/totalw[n,mixe,mixmu,mixtau] +
+  nutauee[n,mixtau]/totalw[n,mixe,mixmu,mixtau] +
+  nutaumumu[n,mixtau]/totalw[n,mixe,mixmu,mixtau] +
+  width3a[n,mixe]/totalw[n,mixe,mixmu,mixtau] +
+  width3a[n,mixmu]/totalw[n,mixe,mixmu,mixtau] +
+  width3a[n,mixtau]/totalw[n,mixe,mixmu,mixtau] +
+  width3a[n,mixtau]/totalw[n,mixe,mixmu,mixtau] +
+  width3b[n,mixtau]/totalw[n,mixe,mixmu,mixtau] +
+  eD[n,mixe]/totalw[n,mixe,mixmu,mixtau] +
+  tauPi[n,mixtau]/totalw[n,mixe,mixmu,mixtau] +
+  nupi0[n,mixtau]/totalw[n,mixe,mixmu,mixtau] +
+  nueta[n,mixtau]/totalw[n,mixe,mixmu,mixtau] +
+  nuetaprime[n,mixtau]/totalw[n,mixe,mixmu,mixtau] +
+  nurho[n,mixtau]/totalw[n,mixe,mixmu,mixtau] +
+  nuomega[n,mixtau]/totalw[n,mixe,mixmu,mixtau] +
+  nuphi[n,mixtau]/totalw[n,mixe,mixmu,mixtau]];
 
-  + nutauee[n,mixtau]/totalw[n,mixe,mixmu,mixtau]
-  + nutaumumu[n,mixtau]/totalw[n,mixe,mixmu,mixtau]
-
-  + width3a[n,mixe]/totalw[n,mixe,mixmu,mixtau]
-  + width3a[n,mixmu]/totalw[n,mixe,mixmu,mixtau]
-  + width3a[n,mixtau]/totalw[n,mixe,mixmu,mixtau]
-  + width3a[n,mixtau]/totalw[n,mixe,mixmu,mixtau]
-
-  + width3b[n,mixtau]/totalw[n,mixe,mixmu,mixtau]
-
-  + eD[n,mixe]/totalw[n,mixe,mixmu,mixtau]
-  + tauPi[n,mixtau]/totalw[n,mixe,mixmu,mixtau]
-
-  + nupi0[n,mixtau]/totalw[n,mixe,mixmu,mixtau]
-  + nueta[n,mixtau]/totalw[n,mixe,mixmu,mixtau]
-  + nuetaprime[n,mixtau]/totalw[n,mixe,mixmu,mixtau]
-
-  + nurho[n,mixtau]/totalw[n,mixe,mixmu,mixtau]
-  + uomega[n,mixtau]/totalw[n,mixe,mixmu,mixtau]
-  + nuphi[n,mixtau]/totalw[n,mixe,mixmu,mixtau];
 
 (*  HNL CONFIG  *)
 hnlparams = {"2000000001:new",
@@ -344,9 +329,9 @@ hnlparams = {"2000000001:new",
 "2000000001:antiName = HNLbar", (* Esto lo define como Dirac *)
 "2000000001:spinType = 2",
 "2000000001:chargeType = 0",
-"2000000001:colType = 0"}
+"2000000001:colType = 0"};
 
-hnlmass[n_]:={"2000000001:m0 = "<>ToString[AccountingForm[n,16]]}
+hnlmass[n_]:={"2000000001:m0 = "<>ToString[AccountingForm[n,16]]};
 (* HNL LIFETIME  *)
 lifetime[n_,mixe_,mixmu_,mixtau_]:=Quiet[Re[1/totalw[n,mixe,mixmu,mixtau]]*1/tfactor*mmc];
 (* PYTHIA8 string *)
@@ -575,11 +560,13 @@ exp421decay[n_,mixe_,mixmu_,mixtau_]:={
 	"421:addChannel = 1 "<>ToString[AccountingForm[d421k323barmu[n,mixmu]/newwidth2hnl[d421, n, mixe, mixmu, mixtau],16]]<>" 22 -13 2000000001 -323"
 };
 
+totalbrfactor[meson_,n_,mixe_,mixmu_,mixtau_]:=(newwidth2hnl[meson, n, mixe, mixmu, mixtau]/newwidth[meson, n, mixe, mixmu, mixtau])*hnl2taubrfactor[n, mixe, mixmu, mixtau];
+
 expmesonbrfactor[meson_,n_,mixe_,mixmu_,mixtau_]:={
-	"# "<>ToString[meson[[5]]]<>" BR factor: "<>ToString[AccountingForm[newwidth2hnl[meson, n, mixe, mixmu, mixtau]/newwidth[meson, n, mixe, mixmu, mixtau],16]]}; 
+	"# "<>ToString[meson[[5]]]<>" BR factor: "<>ToString[AccountingForm[totalbrfactor[meson, n, mixe, mixmu, mixtau],16]]}; 
 
 mesonbrfactor[meson_,n_,mixe_,mixmu_,mixtau_]:={
-  ToString[n]<>" "<>ToString[AccountingForm[newwidth2hnl[meson, n, mixe, mixmu, mixtau]/newwidth[meson, n, mixe, mixmu, mixtau],16]]};   
+  ToString[n]<>" "<>ToString[AccountingForm[totalbrfactor[meson, n, mixe, mixmu, mixtau],16]]};   
 
 
 (* EXPORTA PYTHIA CONFIG FILES PARA "nfiles" MASAS CON <0,1.9>.  *)
